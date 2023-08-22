@@ -1,5 +1,5 @@
-mod types;
+mod str;
 
 fn main() {
-    types::run();
+    str::run();
 }
