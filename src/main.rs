@@ -1,5 +1,5 @@
-mod str;
+mod tuples;
 
 fn main() {
-    str::run();
+    tuples::run();
 }

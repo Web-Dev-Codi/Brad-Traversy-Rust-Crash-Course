@@ -4,12 +4,36 @@
 
 pub fn run() {
     // Stored in stack
-    let hello = "Hello";
-    // String stored in the heap and is growable
-    let yo = String::from("I am stored in the heap broski");
+    let mut hello = String::from("Hello ");
+    //Get length
+    println!("Legth: {}", hello.len());
+    // Can only push on char
+    hello.push('W');
+    // Method to allocate more memory to push larger string stypes
+    hello.push_str("orld!");
+    //Capacity in bytes
+    println!("Capacity: {}", hello.capacity());
 
-    println!(
-        "This {} string literal is stored in the stack and {}",
-        hello, yo
-    );
+    println!("Is Empty: {}", hello.is_empty());
+
+    println!("Contains: {}", hello.contains("World"));
+
+    //Loop through String by whitespace
+    for put_anything_here in hello.split_whitespace() {
+        println!("{}", put_anything_here);
+    }
+
+    //Create string with capacity
+    let mut s = String::with_capacity(10);
+
+    s.push('b');
+    s.push('a');
+
+    // Assertions....left equal to the right
+    // Failing to show error
+    assert_eq!(3, s.len());
+
+    println!("{}", s);
+
+    println!("{}", hello);
 }
