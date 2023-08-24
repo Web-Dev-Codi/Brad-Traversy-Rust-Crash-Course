@@ -8,7 +8,8 @@ pub fn run() {
     println!("Binded Function to variable: {}", bind);
 
     //Closure
-    let add_num = |n1: i32, n2: i32| n1 + n2;
+    let n3: i32 = 10;
+    let add_num = |n1: i32, n2: i32| n1 + n2 + n3;
     println!("Closure Sum: {}", add_num(8, 9));
 }
 
