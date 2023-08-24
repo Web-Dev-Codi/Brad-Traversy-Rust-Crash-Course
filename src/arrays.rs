@@ -18,4 +18,9 @@ pub fn run() {
 
     // Arrays are stack allocated.
     println!("Array occupies {} bytes", mem::size_of_val(&numbers));
+
+    //Get Slice from Array using referance
+    let slice: &[i32] = &numbers;
+
+    println!("Slices: {:?}", slice);
 }
